@@ -51,7 +51,7 @@ app.get('/contact', (req, res) => {
   })
 })
 
-
-app.listen(3000, () => {
-  console.log('App Started')
+// List to port
+app.listen(process.env.POST || 3000, () => {
+  console.log('App Started on port ' + process.env.POST || 3000)
 });
